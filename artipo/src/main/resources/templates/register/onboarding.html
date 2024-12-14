@@ -6,7 +6,9 @@
 </head>
 <body>
     <div>
-        <form method="post" action="resister/submit" >
+        <form method="post" action="/register/submit" >
+
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 
             <label>이름</label>
             <input name="name">
@@ -25,13 +27,13 @@
 
             <label>성별</label>
             <label>
-                <input name="gender" type="radio" value="Male">
+                <input name="gender" type="radio" value="Male">남자
             </label>
             <label>
-                <input name="gender" type="radio" value="Female">
+                <input name="gender" type="radio" value="Female">여자
             </label>
             <label>
-                <input name="gender" type="radio" value="Other">
+                <input name="gender" type="radio" value="Other">Other
             </label>
 
             <label>전화번호</label>
