@@ -1,8 +1,9 @@
 package com.artipo.artipo.service;
 
+import com.artipo.artipo.entity.Profile;
 import com.artipo.artipo.entity.User;
 
 public interface UserService {
 
-    User createUser(User user);
+    User createUserWithProfile(User user, Profile profile);
 }

@@ -13,18 +13,21 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
-
+    @Column(name="user_id")
+    private Long userId;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Profile profile;
+    @Column(name="mobile_number")
+    private String mobileNumber;
+    @CreationTimestamp
+    @Column(name="created_at")
+    private LocalDateTime createdAt;
     private String name;
     private String password;
     private String email;
-    private String mobile_number;
     private String role;
     private String gender;
     private LocalDate birth;
-
-    @CreationTimestamp
-    private LocalDateTime created_at;
 
 
 }

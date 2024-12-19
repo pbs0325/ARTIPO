@@ -14,8 +14,10 @@
         <p>또는</p>
 
         <form method="post" action="/register/onboarding">
-            <input name="email" type="email" placeholder="이메일">
             <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+
+            <input name="email" type="email" placeholder="이메일">
+
             <button>계속</button>
         </form>
 

@@ -1,7 +1,7 @@
 package com.artipo.artipo.dto;
 
+import jakarta.persistence.Column;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,16 +9,17 @@ import java.time.LocalDateTime;
 @Data
 public class UserDto {
 
-    private long user_id;
-
+    @Column(name="user_id")
+    private long userId;
+    @Column(name="mobile_number")
+    private String mobileNumber;
+    @Column(name="created_at")
+    private LocalDateTime createdAt;
     private String name;
-    private String nickname;
     private String password;
     private String email;
-    private String mobile_number;
     private String role;
     private String gender;
     private LocalDate birth;
 
-    private LocalDateTime created_at;
 }

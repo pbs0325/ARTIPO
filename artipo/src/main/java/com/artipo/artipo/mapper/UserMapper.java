@@ -12,8 +12,9 @@ public class UserMapper {
         user.setPassword(userDto.getPassword());
         user.setGender(userDto.getGender());
         user.setBirth(userDto.getBirth());
-        user.setMobile_number(userDto.getMobile_number());
-        user.setCreated_at(userDto.getCreated_at());
+        user.setMobileNumber(userDto.getMobileNumber());
+        user.setCreatedAt(userDto.getCreatedAt());
+        user.setRole(userDto.getRole());
         return user;
     }
 }
